@@ -132,7 +132,7 @@ namespace ConvertCyrilicToLatin
 
                 MailAddress from = new MailAddress(fromParam);
                 MailAddress to = new MailAddress(toParam);
-                if (ImageURL != "")
+                if (ImageURL != null)
                 {
                     LinkedResource linkedImage = new LinkedResource(ImageURL, MediaTypeNames.Image.Jpeg);
                     linkedImage.ContentId = Guid.NewGuid().ToString();
