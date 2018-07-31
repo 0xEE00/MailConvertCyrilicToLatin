@@ -143,8 +143,9 @@ namespace ConvertCyrilicToLatin
                     message.AlternateViews.Add(htmlView);
                 }
                 else
-
+                {
                     message.Body = ReplaceBr(dataParam);
+                }
 
                 message.From = from;
                 message.To.Add(to);
@@ -152,9 +153,9 @@ namespace ConvertCyrilicToLatin
                 message.SubjectEncoding = Encoding.UTF8;
                 message.BodyEncoding = Encoding.UTF8;
                 message.IsBodyHtml = isHTMLParam;
-                client.SendCompleted += new SendCompletedEventHandler(SendCompletedCallback);
-                client.SendAsync(message, "");
-                //client.Send(message);
+                //client.SendCompleted += new SendCompletedEventHandler(SendCompletedCallback);
+                //client.SendAsync(message, "");
+                client.Send(message);
             }
             catch (Exception)
             {
