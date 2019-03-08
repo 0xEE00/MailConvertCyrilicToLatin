@@ -153,6 +153,7 @@ namespace ConvertCyrilicToLatin
                 message.SubjectEncoding = Encoding.UTF8;
                 message.BodyEncoding = Encoding.UTF8;
                 message.IsBodyHtml = isHTMLParam;
+                //Commented code
                 //client.SendCompleted += new SendCompletedEventHandler(SendCompletedCallback);
                 //client.SendAsync(message, "");
                 client.Send(message);
