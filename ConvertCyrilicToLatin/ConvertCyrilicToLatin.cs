@@ -216,30 +216,6 @@ namespace ConvertCyrilicToLatin
                 throw ex;
             }
         }
-        public void AddAtt2(string attParam)
-        {
-            try
-            {
-                Attachment att = new Attachment(attParam);
-                message.Attachments.Add(att);
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
-        public void AddAtt3(string attParam)
-        {
-            try
-            {
-                Attachment att = new Attachment(attParam);
-                message.Attachments.Add(att);
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
 
         public void AddCC(string ccParam)
         {
